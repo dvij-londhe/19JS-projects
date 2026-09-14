@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #0b0b0f;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+  max-width: 1000px;
+  margin: auto;
+  padding: 100px 25px 60px;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #888;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 8vw, 90px);
+  line-height: 1;
+  letter-spacing: -4px;
+  margin-bottom: 25px;
+}
+
+.description {
+  max-width: 550px;
+  color: #999;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ---------------- PROJECTS ---------------- */
+
+.projects-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 25px 80px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.project-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 150px;
+  padding: 25px;
+
+  text-decoration: none;
+  color: white;
+
+  background: #131318;
+  border: 1px solid #24242c;
+  border-radius: 14px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #555;
+  background: #18181e;
+}
+
+/* Project number */
+
+.project-number {
+  align-self: flex-start;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #666;
+
+  min-width: 45px;
+}
+
+/* Project content */
+
+.project-content {
+  padding-right: 35px;
+}
+
+.project-content h2 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.project-content p {
+  color: #888;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Arrow */
+
+.arrow {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 24px;
+  color: #666;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.project-card:hover .arrow {
+  color: white;
+  transform: translate(5px, -50%);
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+  text-align: center;
+
+  padding: 30px 20px;
+
+  border-top: 1px solid #1c1c22;
+
+  color: #555;
+  font-size: 12px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 130px;
+  }
+}
